@@ -8,6 +8,7 @@ import (
 
 func main() {
 	utils.InitSystemConfig()
+	utils.InitDB()
 	r := router.Router()
 	err := r.Run()
 	if err != nil {

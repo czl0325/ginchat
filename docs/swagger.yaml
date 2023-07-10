@@ -1,4 +1,28 @@
 info:
   contact: {}
-paths: {}
+paths:
+  /user/register:
+    post:
+      parameters:
+      - description: 用户名
+        in: formData
+        name: name
+        required: true
+        type: string
+      - description: 密码
+        in: formData
+        name: password
+        type: string
+      - description: 确认密码
+        in: formData
+        name: passwordAgain
+        type: string
+      responses:
+        "200":
+          description: code","message"}
+          schema:
+            type: string
+      summary: 注册用户
+      tags:
+      - 用户模块
 swagger: "2.0"
